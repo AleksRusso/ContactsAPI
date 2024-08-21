@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts Management</title>
+    <!--<style>
+        /* Добавьте базовые стили для таблицы и формы */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+    </style>-->
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <h1>Contacts Management</h1>
+
+    <!-- Раздел для отображения списка контактов -->
+    <h2>All Contacts</h2>
+    <table id="contactsTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Контакты будут добавляться сюда динамически -->
+        </tbody>
+    </table>
+
+    <!-- Форма для добавления/обновления контакта -->
+    <h2>Add/Update Contact</h2>
+    <form id="contactForm">
+        <input type="hidden" id="contactId">
+        <div>
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" required>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" required>
+            <button type="submit">Save Contact</button>
+        </div>
+    </form>
+
+    <!-- Поиск контакта по ID -->
+    <h2>Search Contact by ID</h2>
+    <input type="text" id="searchId" placeholder="Enter Contact ID">
+    <button onclick="getContactById()">Search</button>
+
+    <!-- Раздел для отображения списка контактов -->
+    <h2>Contact:</h2>
+    <table id="contactTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Контакт будет записан здесь -->
+        </tbody>
+    </table>
+
+
+    <script src="js/app.js"></script>
+</body>
+</html>
